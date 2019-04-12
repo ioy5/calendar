@@ -1,0 +1,10 @@
+.calenderHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-item{
+    flex: 1;
+    text-align: center;
+    font-size: 24px;
+}

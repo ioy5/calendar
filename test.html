@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>日历</title>
+    <link rel="stylesheet" href="./calender.css">
+</head>
+
+<body>
+<div id="calender">
+    <div class="calenderHeader">
+        <div class="header-item">一</div>
+        <div class="header-item">二</div>
+        <div class="header-item">三</div>
+        <div class="header-item">四</div>
+        <div class="header-item">五</div>
+        <div class="header-item">六</div>
+        <div class="header-item">日</div>
+    </div>
+    <div class="calender-content">
+
+    </div>
+</div>
+</body>
+<script>
+  //准备自己手写一个日历
+  //首先定义日立的方法有哪些
+  /*
+  * 1.跳转到指定日期
+  * 2.跳转到当前日期
+  * 3.月份的切换
+  *
+  * 日历有哪些属性
+  * 1.农历的开关
+  * 2.自定义日期的标记
+  * 3.
+  *
+  *
+  * */
+</script>
+<script>
+  function Calender(id, params) {
+
+    //定义内部变量
+    var nowDate = new Date();
+
+    this.node = document.getElementById(id);
+    //翻页
+    this.prev = function () {
+
+    }
+    this.next = function () {
+
+    }
+
+    //组装数据
+    function __initData() {
+      //获取当前的日期
+      console.log(nowDate)
+
+    }
+
+    //用来渲染视图的方法
+    function __render() {
+      var container = document.getElementById(id);
+    }
+
+    //初始化方法
+    function init() {
+      __initData();
+      __render();
+    }
+
+
+    init()
+  }
+
+  var calender = new Calender('calender')
+  console.log(calender)
+</script>
+<script>
+  function Person(name, work, param) {
+    function Human(params) {
+      this.hobby = params && params.hobby || '保密'
+      this.skill = params && params.skill || '保密'
+    }
+
+    Human.prototype.getHobby = function () {
+
+    }
+    Human.prototype.getSkill = function () {
+
+    }
+
+    function Work(work) {
+      var _this = this;
+      (function (work, _this) {
+        switch (work) {
+          case 'code':
+            _this.work = '程序猿';
+            _this.workDescription = '只会写代码的人'
+            break;
+          case 'UI':
+          case "UE":
+            _this.work = '设计师';
+            _this.workDescription = '会把美设计出来的人'
+            break
+          case "cook":
+            _this.work = '厨师';
+            _this.workDescription = '会把美味做出来的人'
+            break
+          default:
+            _this.work = '无业';
+            _this.workDescription = '一个无所事事的人'
+        }
+      })(work, _this)
+    }
+
+    function Name(name) {
+      let that = this;
+      (function (name, _this) {
+        _this.name = name
+        //这里还可以做更多的逻辑
+      })(name, that)
+    }
+
+    var person = new Human(param)
+    person.work = new Work(work)
+    person.name = new Name(name)
+    return person
+  }
+
+  var p1 = new Person('lily', 'UI', {skill: 'design', hobby: 'magic'})
+  console.log(p1)
+</script>
+</html>
